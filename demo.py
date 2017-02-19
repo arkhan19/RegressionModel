@@ -15,3 +15,15 @@ Y = dataset.iloc[:, 1].values
 X = X.reshape(-1,1)
 Y = Y.reshape(-1,1)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 1/3, random_state = 0)
+
+# Feature Scaling
+"""from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.transform(X_test)
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train)"""
+
+# Linear Regression
+reg = LinearRegression()
+reg.fit(X_train, Y_train)
