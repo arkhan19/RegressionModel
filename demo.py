@@ -11,3 +11,7 @@ dataset = pd.read_csv('/Users/f3n1Xx/Documents/PycharmProjects/RegressionModel/S
 X = dataset.iloc[:, 0].values
 Y = dataset.iloc[:, 1].values
 
+# Splitting the dataset into the Training set and Test set
+X = X.reshape(-1,1)
+Y = Y.reshape(-1,1)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 1/3, random_state = 0)
